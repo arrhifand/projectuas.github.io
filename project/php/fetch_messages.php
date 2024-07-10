@@ -14,8 +14,8 @@ if ($result->num_rows > 0) {
         echo "<p>" . htmlspecialchars($row['message']) . "</p>";
         echo "<small>Sent on " . $row['created_at'] . "</small>";
         echo "<div class='actions'>";
-        echo "<div class='delete_button'><a href='php/edit_message.php?id=" . $row['id'] . "'>Edit</a> | ";
-        echo "<a href='php/delete_message.php?id=" . $row['id'] . "'>Delete</a>";
+        echo "<button><a class='edit-button' href='php/edit_message.php?id=" . $row['id'] . "'>Edit</a></button> | ";
+        echo "<button class='delete-button'><a class='delete-button' href='php/delete_message.php?id=" . $row['id'] . "'>Delete</a></button>";
         echo "</div>";
         echo "</div>";
     }
